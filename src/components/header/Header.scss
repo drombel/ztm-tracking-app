@@ -1,0 +1,21 @@
+header{
+    background: #282c34;
+    min-width: var(--headerWidth);
+    width: var(--headerWidth);
+    max-width: 100%;
+    overflow-y: auto;
+    position: fixed;
+    height: 100vh;
+    nav{
+        .nav-item{
+            transition: .3s all;
+            color: #fff;
+
+            &:hover, &:focus, &.active{
+                background: #fff;
+                color: #222;
+                // box-shadow: 0 0 5px #222 inset;
+            }
+        }
+    }
+}

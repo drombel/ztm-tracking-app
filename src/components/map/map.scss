@@ -1,0 +1,53 @@
+.child-h-100{
+    & > * {height: 100%;}
+}
+.marker{
+    transition: .3s all;
+    cursor: pointer;
+    filter: drop-shadow(0 0 1px #222);
+
+    &.cluster, &.dot{
+        background: #df082f;
+        color: #fff;
+        font-weight: 700;
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        transform: translate(-50%, -50%);
+        z-index: 20;
+
+    }
+    &.info{
+        background: #fff;
+        border-radius: 5px;
+        width: 200px;
+        font-weight: 500;
+        position: relative;
+        z-index: 30;
+        filter: drop-shadow(0 0 2px #222);
+        transform: translate(-7px, -7px);
+        overflow: hidden;
+
+        table {
+                thead td{
+                    text-align: center;
+                    background: #888;
+                    color: #fff;
+                    font-weight: bold;
+                    padding: 4px;
+                    transition: .3s all;
+                    &:hover{background: #666;}
+            }
+        }
+    }
+
+    &.cluster{
+        background: #fff;
+        color: #222;
+        filter: drop-shadow(0 0 10px #222);
+    }
+}
