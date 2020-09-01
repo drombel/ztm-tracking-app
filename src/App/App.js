@@ -1,15 +1,16 @@
 import React from 'react';
-import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
+import { Route, HashRouter as Router, Switch } from "react-router-dom";
 import Header from './../components/header';
 import NotFound from '../views/NotFound';
 import router from './../router';
 import './App.scss';
 
+
 function App() {
     return (
         <div className="App min-vh-100">
             <Router>
-                <div>
+                <div className='d-flex'>
                     <Header />
                     <main className='min-vh-100'>
                         <Switch>

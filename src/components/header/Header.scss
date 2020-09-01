@@ -1,12 +1,52 @@
+@import "~bootstrap/scss/_functions.scss";
+@import "~bootstrap/scss/_variables.scss";
+@import "~bootstrap/scss/mixins/_breakpoints.scss";
+
 header{
     background: #282c34;
-    min-width: var(--headerWidth);
-    width: var(--headerWidth);
-    max-width: 100%;
-    overflow-y: auto;
-    position: fixed;
     height: 100vh;
+    z-index: 1000;
+    position: relative;
+    transition: .5s all;
+    min-width: 300px;
+    max-width: 300px;
+    @include media-breakpoint-down(md) {
+        min-width: 200px;
+        max-width: 200px;
+    }
+
+    &.active {
+        &, nav{
+            max-width: 0;
+            min-width: 0;
+        }
+        .menu-button span{
+                clip-path: polygon(0 0, 0 20%, 100% 20%, 100% 40%, 0 40%, 0 60%, 100% 60%, 100% 80%, 0 80%, 0 100%, 100% 100%, 100% 0);
+
+        }
+    }
+    
+    .menu-button{
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translateX(100%);
+        filter: drop-shadow(0 0 3px #222);
+        span{
+            margin: 10px 5px;
+            display: block;
+            width: 30px;
+            height: 30px;
+            background: #fff;
+            transition: .5s all;
+            clip-path: polygon(100% 0%, 0% 50%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%);
+        }
+    }
+
     nav{
+        overflow-x: hidden;
+        transition: .5s all;
+
         .nav-item{
             transition: .3s all;
             color: #fff;

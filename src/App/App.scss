@@ -48,14 +48,9 @@ input[type=number]:focus,
     }
 }
 
-body{
-    --headerWidth: 300px;
+@import '~bootstrap/scss/bootstrap.scss';
 
-}
 main{
-    margin-left: var(--headerWidth);
     flex: 1;
     box-shadow: 0 0 5px #222 inset;
 }
-
-@import '~bootstrap/scss/bootstrap.scss';
