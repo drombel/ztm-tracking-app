@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/ztm-tracking-app/static/css/main.0c40397a.chunk.css",
+    "main.js": "/ztm-tracking-app/static/js/main.b3d16077.chunk.js",
+    "main.js.map": "/ztm-tracking-app/static/js/main.b3d16077.chunk.js.map",
+    "runtime-main.js": "/ztm-tracking-app/static/js/runtime-main.2bf01adc.js",
+    "runtime-main.js.map": "/ztm-tracking-app/static/js/runtime-main.2bf01adc.js.map",
+    "static/js/2.d64011f3.chunk.js": "/ztm-tracking-app/static/js/2.d64011f3.chunk.js",
+    "static/js/2.d64011f3.chunk.js.map": "/ztm-tracking-app/static/js/2.d64011f3.chunk.js.map",
+    "index.html": "/ztm-tracking-app/index.html",
+    "precache-manifest.54f1e1adc080a62c49b0896fe151f627.js": "/ztm-tracking-app/precache-manifest.54f1e1adc080a62c49b0896fe151f627.js",
+    "service-worker.js": "/ztm-tracking-app/service-worker.js",
+    "static/css/main.0c40397a.chunk.css.map": "/ztm-tracking-app/static/css/main.0c40397a.chunk.css.map",
+    "static/js/2.d64011f3.chunk.js.LICENSE.txt": "/ztm-tracking-app/static/js/2.d64011f3.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2bf01adc.js",
+    "static/js/2.d64011f3.chunk.js",
+    "static/css/main.0c40397a.chunk.css",
+    "static/js/main.b3d16077.chunk.js"
+  ]
+}
