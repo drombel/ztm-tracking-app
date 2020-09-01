@@ -26,7 +26,7 @@ function MapContainer(props) {
 
     useEffect(() => {
         fetchData();
-        if(autoUpdate) refresher.current = setInterval(() => fetchData(), autoUpdate);
+        if (autoUpdate) refresher.current = setInterval(() => fetchData(), autoUpdate);
         // cleanup
         return () => clearTimeout(refresher.current)
     }, []);
@@ -75,12 +75,9 @@ function MapContainer(props) {
 
     const Clusters = () => {
         const points = markers.map(marker => ({
-            type: "Feature",
+            type: "Cluster",
             properties: { item: { ...marker }, cluster: false },
-            geometry: {
-                type: "Point",
-                coordinates: [parseFloat(marker.Lon), parseFloat(marker.Lat)]
-            }
+            geometry: { type: "Point", coordinates: [parseFloat(marker.Lon), parseFloat(marker.Lat)] }
         }));
 
         const { clusters, supercluster } = useSupercluster({ points, bounds, zoom, options: { radius: 75, maxZoom: 20 } });
@@ -89,7 +86,8 @@ function MapContainer(props) {
             const [longitude, latitude] = cluster.geometry.coordinates;
             const { cluster: isCluster, point_count: pointCount } = cluster.properties;
 
-            return isCluster ? (<Cluster key={key} lat={latitude} lng={longitude} supercluster={supercluster} cluster={cluster} pointCount={pointCount} />) :
+            return isCluster ?
+                (<Cluster key={key} lat={latitude} lng={longitude} supercluster={supercluster} cluster={cluster} pointCount={pointCount} />) :
                 (<Marker key={key} lat={latitude} lng={longitude} item={cluster.properties.item} Template={template} />);
         });
 
@@ -98,8 +96,14 @@ function MapContainer(props) {
 
     return (
         <div style={{ height: '100vh', width: '100%' }}>
+            {/* 
+                List from markers
+                //use onClick
+                mapRef.current.setZoom(expansionZoom);
+                mapRef.current.panTo({ lat, lng });
+            */}
             <GoogleMapReact
-                bootstrapURLKeys={{ key: 'AIzaSyBtEh6FMFwJA-0X7NNb8yDlQ1M7x-PJ8iU' }}
+                bootstrapURLKeys={{ key: process.env.REACT_APP_GOOGLE_MAPS_KEY }}
                 defaultCenter={props.center}
                 defaultZoom={props.zoom}
                 onChildClick={onChildClick}
@@ -109,18 +113,10 @@ function MapContainer(props) {
                 onGoogleApiLoaded={onGoogleApiLoaded}
                 onChange={({ zoom, bounds }) => {
                     setZoom(zoom);
-                    setBounds([
-                        bounds.nw.lng,
-                        bounds.se.lat,
-                        bounds.se.lng,
-                        bounds.nw.lat
-                    ]);
+                    setBounds([bounds.nw.lng, bounds.se.lat, bounds.se.lng, bounds.nw.lat]);
                 }}
             >
                 {Clusters().map(item => item)}
-
-
-                {/* {markers?.map?.((item, key) => <Marker lat={item.Lat} lng={item.Lon} item={item} key={key} Template={template} />)} */}
             </GoogleMapReact>
         </div>
     );
