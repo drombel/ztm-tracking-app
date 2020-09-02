@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { NavLink, Link } from "react-router-dom";
 import router from './../../router';
-import logo from './../../assets/logo-bus-app.png';
+import logo from './../../assets/bus-logo.png';
 import './Header.scss';
 
 export default function () {
