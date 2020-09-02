@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "23a26ce92a783dff9439fa0c18b5042a",
+    "revision": "620b2419e6a8bc4a4aaac75a07bef3c2",
     "url": "/ztm-tracking-app/index.html"
   },
   {
-    "revision": "f07b4a5fed20857a8863",
+    "revision": "290d82375d7c576e7938",
     "url": "/ztm-tracking-app/static/css/main.0c40397a.chunk.css"
   },
   {
@@ -16,11 +16,15 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ztm-tracking-app/static/js/2.d64011f3.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "f07b4a5fed20857a8863",
-    "url": "/ztm-tracking-app/static/js/main.b3d16077.chunk.js"
+    "revision": "290d82375d7c576e7938",
+    "url": "/ztm-tracking-app/static/js/main.46a97828.chunk.js"
   },
   {
     "revision": "191164356623012e7e9a",
     "url": "/ztm-tracking-app/static/js/runtime-main.2bf01adc.js"
+  },
+  {
+    "revision": "8ff7795b8856667a58dbdb33ea4e851b",
+    "url": "/ztm-tracking-app/static/media/bus-logo.8ff7795b.png"
   }
 ]);
