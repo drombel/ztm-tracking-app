@@ -25,8 +25,17 @@ function Buses(props) {
         return buses;
     }, [routes]);
 
+    let coords = { lat: 54.385561, lng: 18.600739 };
+    navigator.geolocation.getCurrentPosition(pos => {
+        const crd = pos.coords;
+        coords.lat = crd.latitude;
+        coords.lng = crd.longitude;
+    }, () => null, {
+        enableHighAccuracy: true,
+        timeout: 5000,
+        maximumAge: 0
+    });
 
-    const coords = { lat: 54.385561, lng: 18.600739 };
     const map_marker = ({ item }) => {
         return (
             <div className={`marker`}>
