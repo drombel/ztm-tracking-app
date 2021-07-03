@@ -30,7 +30,7 @@ function Buses(props) {
         const crd = pos.coords;
         coords.lat = crd.latitude;
         coords.lng = crd.longitude;
-    }, () => null, {
+    }, err => null, {
         enableHighAccuracy: true,
         timeout: 5000,
         maximumAge: 0

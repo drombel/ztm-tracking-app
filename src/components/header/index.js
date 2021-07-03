@@ -5,7 +5,7 @@ import logo from './../../assets/bus-logo.png';
 import './Header.scss';
 
 export default function () {
-    const [menu, setMenu] = useState(false);
+    const [menu, setMenu] = useState(!(window.innerWidth > 768));
     const onClickMenu = () => setMenu(v => !v);
     const onClickMenuHide = () => setMenu(true)
     return (
