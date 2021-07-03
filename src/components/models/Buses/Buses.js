@@ -75,7 +75,7 @@ function Buses(props) {
         <>
             {/* {data?.map?.((item, key) => (<div key={key}>{item.Line}, {item.VehicleId}, {item.Speed}, {item.Delay} Lat: {item.Lat}, Long: {item.Lon}</div>))} */}
             <div className='vh-100' >
-                {routes.length > 0 && <Map center={coords} zoom={12} refreshFunc={fetchBuses} idField={'VehicleId'} autoUpdate={5000} mapMarker={map_marker} mapSidebarItem={map_sidebar_item} />}
+                {routes.length > 0 && <Map center={coords} zoom={16} refreshFunc={fetchBuses} idField={'VehicleId'} autoUpdate={5000} mapMarker={map_marker} mapSidebarItem={map_sidebar_item} />}
             </div>
         </>
     );
