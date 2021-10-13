@@ -81,7 +81,7 @@ function MapContainer(props) {
             geometry: { type: "Point", coordinates: [parseFloat(marker.Lon), parseFloat(marker.Lat)] }
         }));
 
-        const { clusters, supercluster } = useSupercluster({ points, bounds, zoom, options: { radius: 55, minZoom: 12, maxZoom: 20 } });
+        const { clusters, supercluster } = useSupercluster({ points, bounds, zoom, options: { radius: 25, maxZoom: 20 } });
 
         const newClusters = clusters.map((cluster, key) => {
             const [longitude, latitude] = cluster.geometry.coordinates;
